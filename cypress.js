@@ -10,7 +10,7 @@
 		build : function()
 		{
 			$("<div class='container' id='image-container'></div>").appendTo("body").hide();
-			$("<img src='img/fox_large.png' alt='' id='gallery-image'/>").appendTo("div#image-container");
+			$("<img src='" + settings.images[settings.position].normal + "' alt='' id='gallery-image'/>").appendTo("div#image-container");
 			$("div#image-container").append("<h2>" + settings.images[settings.position].title + "</h2>");
 			$("div#image-container").append("<a href='prev' id='prev'>prev</a>");
 			$("div#image-container").append("<a href='next' id='next'>next</a>");
