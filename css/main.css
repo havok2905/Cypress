@@ -1,0 +1,132 @@
+@font-face{
+	font-family: 'lobster';
+    src: url('fonts/Lobster_1.3-webfont.eot');
+    src: url('fonts/Lobster_1.3t-webfont.eot?#iefix') format('embedded-opentype'),
+         url('fonts/Lobster_1.3-webfont.woff') format('woff'),
+         url('fonts/Lobster_1.3-webfont.ttf') format('truetype'),
+         url('fonts/Lobster_1.3-webfont.svg#bebasNeue') format('svg');
+}
+
+.clear{
+	clear: both;
+}
+
+.hidden{
+	display: none;
+}
+
+body{
+	margin: 0em;
+	padding: 0em;
+}
+
+footer{
+	text-align: center;
+	margin-top: 1em;
+	padding: 1em;
+	background-color: #2B9F48;
+	box-shadow: inset #333 0em 0em 0.5em;
+	font-family: 'lobster';
+	font-size: 1.5em;
+	color: #ffffff;
+}
+
+footer a{
+	text-decoration: none;
+	color: #333;
+	-webkit-transition: color 0.5s;
+	-moz-transition: color 0.5s;
+	-o-transition: color 0.5s;
+	transition: color 0.5s;
+}
+footer a:hover{
+	color: #555;
+}
+
+header{
+	text-align: center;
+	background: rgb(255,255,255); /* Old browsers */
+	background: -moz-linear-gradient(top, rgba(255,255,255,1) 0%, rgba(229,229,229,1) 100%); /* FF3.6+ */
+	background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,rgba(255,255,255,1)), color-stop(100%,rgba(229,229,229,1))); /* Chrome,Safari4+ */
+	background: -webkit-linear-gradient(top, rgba(255,255,255,1) 0%,rgba(229,229,229,1) 100%); /* Chrome10+,Safari5.1+ */
+	background: -o-linear-gradient(top, rgba(255,255,255,1) 0%,rgba(229,229,229,1) 100%); /* Opera 11.10+ */
+	background: -ms-linear-gradient(top, rgba(255,255,255,1) 0%,rgba(229,229,229,1) 100%); /* IE10+ */
+	background: linear-gradient(to bottom, rgba(255,255,255,1) 0%,rgba(229,229,229,1) 100%); /* W3C */
+	filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#ffffff', endColorstr='#e5e5e5',GradientType=0 ); /* IE6-9 */
+	box-shadow: #333 0em 0em 0.5em;
+}
+
+header h1{
+	padding-top: 0,5em;
+	padding-bottom: 0.5em;
+}
+
+#main{
+	max-width: 70em;
+	margin-left: auto;
+	margin-right: auto;
+}
+
+h2{
+	font-family: 'lobster';
+	font-size: 3em;
+	color: #7CB585;
+	text-align: center;
+	border-bottom: dashed 1px #ddd;
+	margin-top: 1em;
+	margin-bottom: 0.5em;
+}
+
+p{
+	font-family: 'verdana';
+	font-size: 0.9em;
+	line-height: 1.5em;
+	margin-top: 0.25em;
+	margin-bottom: 0.25em;
+}
+
+dd{
+	font-family: 'verdana';
+	font-size: 0.9em;
+	line-height: 1.5em;
+	margin-top: 0.25em;
+	margin-left: 2em;
+}
+
+dt{
+	color: #555;
+	font-family: 'lobster';
+	font-size: 1.5em;
+	font-weight: bold;
+	margin-top: 2em;
+}
+
+#download-list{
+	text-align: center;
+	margin-top: 3em;
+}
+#download-list li{
+	display: inline;
+}
+#download-list li a{
+	text-align: center;
+	font-family: 'lobster';
+	font-size: 1.5em;
+	color: #555;
+	box-shadow: #333 0em 0em 0.25em;
+	text-decoration: none;
+	margin: 0.25em;
+	padding-top:1em;
+	padding-bottom: 1em;
+	border-radius: 0.2em;
+	width:12em;
+	background-color: #f2f0cd;
+	display: inline-block;
+	-webkit-transition: background-color, 0.5s;
+	-moz-transition: background-color, 0.5s;
+	-o-transition: background-color, 0.5s;
+	-transition: background-color, 0.5s;
+}
+#download-list li a:hover{
+	background-color: #dbd9ba;
+}

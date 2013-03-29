@@ -1,0 +1,164 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<title>Cypress Image Gallery</title>
+		<script src="js/jquery.js"></script>
+		<script src="js/cypress.js"></script>
+		<script src="js/sample.js"></script>
+		<link rel="stylesheet" type="text/css" href="css/reset.css"/>
+		<link rel="stylesheet" type="text/css" href="css/main.css"/>
+		<link rel="stylesheet" type="text/css" href="css/theme.css"/>
+		<script type="text/javascript" src="js/sh/scripts/shCore.js"></script>
+		<script type="text/javascript" src="js/sh/scripts/shBrushJScript.js"></script>
+		<script type="text/javascript" src="js/sh/scripts/shBrushXml.js"></script>
+		<link href="js/sh/styles/shCore.css" rel="stylesheet" type="text/css" />
+		<link href="js/sh/styles/shThemeRDark.css" rel="stylesheet" type="text/css" />
+		<script type="text/javascript">
+			SyntaxHighlighter.all();
+		</script>
+	</head>
+	<body>
+		<header>
+			<h1><img src="img/logo.png" alt="Cypress Logo"/><span class="hidden">Cypress Image Gallery</span></h1>
+			<a href="https://github.com/havok2905/Cypress"><img style="position: absolute; top: 0; left: 0; border: 0;" src="https://s3.amazonaws.com/github/ribbons/forkme_left_green_007200.png" alt="Fork me on GitHub"></a>
+		</header>
+		<div id="main">
+			<ul id="download-list">
+				<li><a href="res/cypresstandard.zip">Cypress V.1.0</a></li>
+				<li><a href="res/cypresstandard.zip">Cypress V.1.0 (With Theme)</a></li>
+			</ul>
+			<div class="clear"></div>
+			<h2>Demo</h2>
+			<div id="gallery"></div>
+			<h2>What is Cypress?</h2>
+			<p>
+				Cypress is a bare bones, no special features image gallery that is easy to configure and setup with 
+				a default theme. Cypress simply contains the functionality of selecting an image, displaying the result,
+				and allowing you to navigate through content. Cypress contains minimal html elements 
+				to make custom styling a breeze for any designer. 
+				Also, the use of objects as the containers for our image data
+				allows for Cypress to include images from any source.
+			</p>
+			<h2>How to Implement Cypress</h2>
+			<p>
+				Make sure you have a version of jQuery included in your application as 
+				well as the cypress.js file and any downloaded themes.
+			</p>
+			<pre class="brush: xml; first-line: 1;">
+&lt;head&gt;
+	&lt;title&gt;Cypress Gallery&lt;/title&gt;
+	&lt;script src="js/jquery.js"&gt;&lt;/script&gt;
+	&lt;script src="js/cypress.js"&gt;&lt;/script&gt;
+	&lt;link rel="stylesheet" type="text/css" href="css/theme.css"/&gt;
+&lt;/head&gt;
+			</pre>
+			<p>
+				To implement this plugin in your website first create a 
+				div tag with the id "gallery" where you want the gallery to appear.
+			</p>
+			<pre class="brush: xml; first-line: 1;">
+&lt;div id="gallery"&gt;&lt;/div&gt;
+			</pre>
+			<p>
+				In a JavaScript file you want to now initialize the gallery. 
+				We do this by adding an object with our image information inside. 
+				Then we call a build method. It should be structured as such.
+			</p>
+			<pre class="brush: js; first-line: 1;">
+$(document).ready(function()
+{
+	$("html").cypress({"images":[
+		{
+			"title": "Country Side",
+			"desc": "Picture of rural Texas",
+			"thumb": "img/gallery01_thumb.jpg",
+			"normal": "img/gallery01.jpg",
+		},
+		{
+			"title": "Airplane Shot",
+			"desc": "Picture of lakes over Orlando Florida",
+			"thumb": "img/gallery02_thumb.jpg",
+			"normal": "img/gallery02.jpg",
+		},
+	]
+	});
+	$("html").cypress("build");
+});
+			</pre>
+			<h2>Style Guide</h2>
+			<pre class="brush: xml; first-line: 1;">
+&lt;div id="gallery"&gt;
+	&lt;div id="image-container" class="container"&gt;
+		&lt;img src="img/gallery01.jpg" alt="" id="gallery-image"&gt;
+		&lt;h2&gt;Title&lt;/h2&gt;
+		&lt;ul id="nav-list"&gt;
+			&lt;li&gt;
+				&lt;a href="prev" id="#prev"&gt;prev&lt;/a&gt;
+			&lt;/li&gt;
+			&lt;li&gt;
+				&lt;a href="next" id="#next"&gt;next&lt;/a&gt;
+			&lt;/li&gt;
+		&lt;/ul&gt;
+		&lt;a href="back" id="#back"&gt;back&lt;/a&gt;
+	&lt;div/&gt;
+	&lt;div id="gallery-container" class="container"&gt;
+		&lt;ul&gt;
+			&lt;li&gt;
+				&lt;a href="#" data-role=0&gt;
+					&lt;img src="img/image.png" alt="The description"/&gt;
+				&lt;/a&gt;
+			&lt;/li&gt;
+		&lt;/ul&gt;
+	&lt;/div&gt;
+&lt;/div&gt;
+			</pre>
+			<dl>
+				<dt>div#gallery</dt>
+				<dd>
+					#gallery is the container for the entire gallery plugin.
+				</dd>
+				<dt>div.container</dt>
+				<dd>
+					.container is what houses both of the two content containers of this plugin; the displayed
+					image as well as the image selection window. In the demo, it is what provides the grey borders.
+				</dd>
+				<dt>div#gallery-container (also has the container class)</dt>
+				<dd>
+					#gallery-container contains the list of images which you select.
+				</dd>
+				<dt>div#image-container (also has the container class)</dt>
+				<dd>
+					#image-container houses our image that we selected as well as some navigation controls. 
+				</dd>
+				<dt>div#image-container img#gallery-image</dt>
+				<dd>
+					This is the larger version of the image you selected
+				</dd>
+				<dt>div#image-container h2</dt>
+				<dd>
+					This is the title of our selected image.
+				</dd>
+				<dt>div#image-container ul#nav-list</dt>
+				<dd>
+					This contains the links that allow us to move from image to image when the 
+					#image-container is visible.
+				</dd>
+				<dt>div#image-container ul#nav-list li a#prev</dt>
+				<dd>
+					This is our previous image link.
+				</dd>
+				<dt>div#image-container ul#nav-list li a#next</dt>
+				<dd>
+					This is our next image link.
+				</dd>
+				<dt>div#image-container a#back</dt>
+				<dd>
+					This link is what takes us back to the image selection window.
+				</dd>
+			</dl>
+		</div>
+		<footer>
+			This plugin is maintained by Christopher McLean at <a href="http://www.mcleancode.com">McLean Code</a>
+		</footer>
+	</body>
+</html>

@@ -1,0 +1,103 @@
+@font-face{
+	font-family: 'quicksand';
+    src: url('fonts/Quicksand_Light-webfont.eot');
+    src: url('fonts/Quicksand_Light-webfont.eot?#iefix') format('embedded-opentype'),
+         url('fonts/Quicksand_Light-webfont.woff') format('woff'),
+         url('fonts/Quicksand_Light-webfont.ttf') format('truetype'),
+         url('fonts/Quicksand_Light-webfont.svg#bebasNeue') format('svg');
+}
+
+.container{
+	position: relative;
+	width:64em;
+	margin-left: auto;
+	margin-right: auto;
+	border-radius: 0.5em;
+	padding: 1em;
+	border: solid #dddddd 1px;
+	color:#999;
+}
+
+#gallery{
+	display: block;
+	margin-top: 1em;
+}
+
+#gallery img{
+	box-shadow: #333 0em 0em 0.25em;
+}
+
+#gallery h2{
+	font-size: 1.5em;
+	font-family: 'quicksand';
+	color:#CCC;
+	margin: 0.5em 0em 0em 0em;
+	padding: 0;
+	text-align: center;
+	border: none;
+}
+
+#gallery ul li{
+	list-style-type: none;
+}
+
+#gallery ul li a{
+	margin: 0;
+	padding: 0;
+	font-family: 'quicksand';
+}
+
+#gallery-container ul{
+	text-align: center;
+}
+
+#gallery-container ul li{
+	display: inline;
+	padding: 0.5em;
+	-webkit-transition: opacity, 0.5s;
+	-moz-transition: opacity, 0.5s;
+	-o-transition: opacity, 0.5s;
+	transition: opacity, 0.5s;
+	font-family: 'quicksand';
+}
+
+#gallery-container ul li:hover{
+	opacity: 0.8
+}
+
+#image-container img{
+	width: 80%;
+	display: block;
+	margin-left: auto;
+	margin-right: auto;
+}
+
+#back{
+	position: absolute;
+	top: 1em;
+	left: 1em;
+}
+
+#back, #prev, #next{
+	font-family: 'quicksand';
+	color:#CCC;
+	-webkit-transition: color, 0.5s;
+	-moz-transition: color, 0.5s;
+	-o-transition: color, 0.5s;
+	transition: color, 0.5s;
+}
+#back:hover, #prev:hover, #next:hover{
+	color:#999;
+}
+
+#nav-list{
+	margin: 0;
+	padding: 0;
+	text-align: center;
+}
+
+#nav-list li{
+	display: inline;
+	text-align: center;
+	padding: 0.25em;
+}
